@@ -37,4 +37,6 @@ langchain_pinecone model
 
 -> install requirements (pip install requirements.txt)
 
+-> Edit drug_code_bot.py file and enter your openai and pinecone key and save it.
+
 -> run main file (flask --app drug_code_bot.py run)
