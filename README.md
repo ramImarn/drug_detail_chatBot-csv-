@@ -1,7 +1,8 @@
-# drug_detail_chatBot-csv-
+# drug_detail_chatBot-csv
 langchain_pinecone model
 
--> This project use langchain framework with 2 agents.\n
+-> This project use langchain framework with 2 agents.
+
 -> This agent use csv file as source dataset and process it with OpenAI to convert it as embeddings.
 -> Then store the embeddings with pinecone database.
 
