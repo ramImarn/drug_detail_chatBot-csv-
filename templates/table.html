@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lists as Columns</title>
+    <style>
+        table {
+            width: 60%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lists as Columns</h1>
+
+    <form id="inputForm" method="post">
+        <label for="inputText">Enter a word list (type "exit" to finish):</label><br>
+        <input type="text" id="inputText" name="inputText">
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Lists Displayed</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>LLT_NAME</th>
+                <th>LLT_CODE</th>
+                <th>SIMILARITY SCORES</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in range(max_length) %}
+            <tr>
+                <td>{{ word_list[i] if i < word_list|length else '' }}</td>
+                <td>{{ score_list[i] if i < score_list|length else '' }}</td>
+                <td>{{ word_list1[i] if i < word_list1|length else '' }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
