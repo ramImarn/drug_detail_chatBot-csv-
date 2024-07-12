@@ -29,6 +29,9 @@ langchain_pinecone model
 
 **Installation**
 -> create a new environment (python3.10).
+
 -> clone the repo.
+
 -> install requirements (pip install requirements.txt)
+
 -> run main file (flask --app drug_code_bot.py run)
