@@ -31,11 +31,11 @@ langchain_pinecone model
 
 **Installation**
 
--> create a new environment (python3.10).
+-> create a new folder and get into it then create new python environment (python3 -m venv myenv) activate it.
 
 -> clone the repo.
 
--> install requirements (pip install requirements.txt)
+-> install requirements (pip install -r requirements.txt)
 
 -> Edit drug_code_bot.py file and enter your openai and pinecone key and save it.
 
