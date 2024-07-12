@@ -4,16 +4,21 @@ langchain_pinecone model
 -> This project use langchain framework with 2 agents.
 
 -> This agent use csv file as source dataset and process it with OpenAI to convert it as embeddings.
+
 -> Then store the embeddings with pinecone database.
 
  **Agent I**
    -> Takes the user query (i have headache) as input to this agent.
+   
    -> This agent proess the input with langchain and checks for the similarities from the database.
+   
    -> It return the result to Agent II, as top 9 matching drugs which all related to user query (headache).
 
  **Agent II**
    -> Takes Agent I result and process it for finding respective code for the drug.
+   
    -> Checks the dataset from csv and return the code with similarity score similar drug and its code.
+   
    -> send it to thr front end UI through the flask API.
     
 **workflow**
