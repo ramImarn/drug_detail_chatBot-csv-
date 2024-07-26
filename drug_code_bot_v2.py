@@ -22,7 +22,8 @@ def drug_drug():
     csv_file_path = configration.CSV_FILE_PATH
     os.environ['OPENAI_API_KEY'] = configration.OPENAI_API_KEY  
     os.environ['PINECONE_API_KEY'] = configration.PINECONE_API_KEY     
-    index_name = configration.INDEX_NAME
+    index_name = 'drugdetails'
+    #index_name = configration.INDEX_NAME
     embeddings = OpenAIEmbeddings()
  
     try:
