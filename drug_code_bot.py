@@ -93,7 +93,7 @@ def drug_drug():
         with ThreadPoolExecutor() as executor:
             corrected_query_future = executor.submit(spell_check, input_text)
             llt_names_future = executor.submit(db_exts, corrected_query_future.result())
-            print(corrected_query_future.result())
+            print("searching smililarity for:",corrected_query_future.result(),"wait for a moment")
 
         llt_names, llt_scores = llt_names_future.result()
 
@@ -109,10 +109,10 @@ def drug_drug():
         unique_scores = [unique_results[llt][1] for llt in unique_llts]
  
         lst = []
-        for k in range(5):
+        for k in range(len(unique_llts)):
             entry =  {
-            "LLT_CODE": unique_llts[k],
-            "LLT_NAME": unique_codes[k],
+            "LLT_NAME": unique_llts[k],
+            "LLT_CODE": unique_codes[k],
             "SIMILARITY_SCORE": unique_scores[k]
             } 
             lst.append(entry)
